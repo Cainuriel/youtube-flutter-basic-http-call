@@ -1,3 +1,5 @@
-# http_app
+# http_app_call
 
-A new Flutter project.
+instalar la dependencia ``` dio ```
+Para sacar el modelo en dart de un objeto json usar:
+[https://app.quicktype.io/](https://app.quicktype.io/)
