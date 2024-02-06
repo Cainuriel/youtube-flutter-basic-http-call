@@ -40,13 +40,16 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text('Peticiones Http'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Nombre: ${_pokemon?.name}'),
-            if (_pokemon != null) Image.network(_pokemon!.sprites.frontDefault),
-          ],
-        ),
+        child: _pokemon != null
+            ? Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Nombre: ${_pokemon?.name}'),
+                  if (_pokemon != null)
+                    Image.network(_pokemon!.sprites.frontDefault),
+                ],
+              )
+            : const CircularProgressIndicator(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _init,
